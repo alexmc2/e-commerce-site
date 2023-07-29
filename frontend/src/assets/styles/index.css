@@ -3,6 +3,7 @@
 /* Font imports */
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,400;0,700;1,400&family=Poppins&family=Roboto:wght@300&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
 /* Your custom styles */
 main {
   min-height: 80vh;
@@ -57,6 +58,4 @@ table th {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
 }
-h1 {
-  font-weight: bold;
-}
+
