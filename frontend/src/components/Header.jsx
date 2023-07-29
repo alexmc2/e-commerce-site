@@ -10,7 +10,7 @@ const Header = () => {
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
-              <img src={logo} alt="shop" />{' '}
+              <img src={logo} alt="shop" /> 
               <span
                 className="ms-3"
                 style={{ fontFamily: 'Poppins', fontSize: '23px' }}
@@ -23,7 +23,7 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <LinkContainer to="/cart">
-                <Nav.Link >
+                <Nav.Link>
                   <FaShoppingCart /> Cart
                 </Nav.Link>
               </LinkContainer>
