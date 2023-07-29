@@ -1,22 +1,22 @@
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Product = ({ product }) => {
-
   const formattedPrice = product.price.toLocaleString('en-GB', {
     style: 'currency',
     currency: 'GBP',
   });
   return (
     <Card className="my-3 p-3 rounded">
-      <a href={`/product/${product._id}`}>
+      <Link to={`/product/${product._id}`}>
         <Card.Img src={product.image} variant="top" />
-      </a>
+      </Link>
       <Card.Body>
-        <a href={`/product/${product._id}`}>
+        <Link to={`/product/${product._id}`}>
           <Card.Title as="div">
             <strong>{product.name}</strong>
           </Card.Title>
-        </a>
+        </Link>
 
         <Card.Text as="div">
           <div className="my-3">
@@ -24,7 +24,7 @@ const Product = ({ product }) => {
           </div>
         </Card.Text>
 
-          <Card.Text as="h3">{formattedPrice}</Card.Text>
+        <Card.Text as="h3">{formattedPrice}</Card.Text>
       </Card.Body>
     </Card>
   );
