@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/alexmc2/e-commerce-site#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^7.4.1"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",

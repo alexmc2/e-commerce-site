@@ -10,7 +10,7 @@ const Header = () => {
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
-              <img src={logo} alt="shop" /> 
+              <img src={logo} alt="shop" />
               <span
                 className="ms-3"
                 style={{ fontFamily: 'Poppins', fontSize: '23px' }}
@@ -20,7 +20,10 @@ const Header = () => {
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className="justify-content-center"
+          >
             <Nav className="ms-auto">
               <LinkContainer to="/cart">
                 <Nav.Link>
