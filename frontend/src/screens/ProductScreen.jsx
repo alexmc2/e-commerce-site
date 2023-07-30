@@ -20,6 +20,7 @@ const ProductScreen = () => {
 
   return (
     <>
+      {/* <div style={{ height: '80vh', overflowY: 'scroll' }}></div> */}
       <Link className="btn btn-light my-3" to="/">
         Go Back
       </Link>
@@ -75,6 +76,7 @@ const ProductScreen = () => {
         </Col>
       </Row>
     </>
+    // </div>
   );
 };
 
