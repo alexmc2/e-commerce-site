@@ -16,6 +16,8 @@ const app = express();
 //body parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// cookie parser middleware
 app.use(cookieParser());
 
 app.get('/', (req, res) => {

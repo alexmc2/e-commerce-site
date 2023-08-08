@@ -4090,6 +4090,7 @@ fieldset:disabled .btn {
   position: static;
 }
 
+
 .navbar-text {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -8906,7 +8907,7 @@ fieldset:disabled .btn {
 
 .bg-dark {
   --bs-bg-opacity: 1;
-  background-color: rgba(112, 17, 93, 0.944) !important;
+  background-color: rgb(0, 0, 0) !important;
 }
 
 
