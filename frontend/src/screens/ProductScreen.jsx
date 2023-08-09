@@ -35,7 +35,6 @@ const ProductScreen = () => {
     dispatch(addToCart({ ...product, qty }));
     navigate('/cart');
   };
- 
 
   return (
     <>
@@ -53,10 +52,15 @@ const ProductScreen = () => {
         <>
           <Row>
             <Col md={6}>
-              <Image src={product.image} alt={product.name} fluid />
+              <Image
+                src={product.image}
+                alt={product.name}
+                fluid
+                style={{ borderRadius: '6px' }}
+              />
             </Col>
             <Col md={3}>
-              <ListGroup variant="flush">
+              <ListGroup variant="flush " style={{ borderRadius: '6px' }}>
                 <ListGroup.Item>
                   <h3>{product.name}</h3>
                 </ListGroup.Item>

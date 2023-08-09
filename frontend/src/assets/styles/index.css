@@ -62,3 +62,8 @@ table th {
 body {
   overflow-y: scroll;
 }
+
+.app-container {
+  background-color: black; 
+  min-height: 100vh;
+}
