@@ -64,6 +64,6 @@ body {
 }
 
 .app-container {
-  background-color: black; 
+  background-color: rgba(223, 244, 250, 0.219); 
   min-height: 100vh;
 }

@@ -10,6 +10,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   return (
+    <div className="app-container">
     <>
       <ToastContainer />
       <Header />
@@ -20,6 +21,7 @@ const App = () => {
       </main>
       <Footer />
     </>
+    </div>
   );
 };
 
