@@ -8,6 +8,7 @@ import Loader from '../components/Loader';
 import { toast } from 'react-toastify';
 import { setCredentials } from '../slices/authSlice';
 import { useGetMyOrdersQuery } from '../slices/ordersApiSlice';
+import { FaTimes} from 'react-icons/fa';
 
 const ProfileScreen = () => {
   const [name, setName] = useState('');
@@ -128,15 +129,16 @@ const ProfileScreen = () => {
                     {order.isPaid ? (
                       order.paidAt.substring(0, 10)
                     ) : (
-                      <i className="fas fa-times" style={{ color: 'red' }}></i>
+                        <FaTimes style={{ color: 'red' }} />
                     )}
                   </td>
                   <td>
                     {order.isDelivered ? (
                       order.deliveredAt.substring(0, 10)
                     ) : (
-                      <i className="fas fa-times" style={{ color: 'red' }}></i>
-                    )}
+                        <FaTimes style={{ color: 'red' }} />
+                        )}
+                    
                   </td>
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
