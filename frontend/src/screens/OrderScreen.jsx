@@ -25,6 +25,8 @@ const OrderScreen = () => {
 
   const [payOrder, { isLoading: loadingPay }] = usePayOrderMutation();
 
+
+
   const { userInfo } = useSelector((state) => state.auth);
 
   const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
@@ -56,7 +58,7 @@ const OrderScreen = () => {
   }, [errorPayPal, loadingPayPal, order, paypal, paypalDispatch]);
 
   function onApprove(data, actions) {
-    return actions.order.capture.then(async function (details) {
+    return actions.order.capture().then(async function (details) {
       try {
         await payOrder({ orderId, details });
         refetch();
@@ -81,14 +83,12 @@ const OrderScreen = () => {
       .create({
         purchase_units: [
           {
-            amount: {
-              value: order.totalPrice,
-            },
+            amount: { value: order.totalPrice },
           },
         ],
       })
-      .then((orderId) => {
-        return orderId;
+      .then((orderID) => {
+        return orderID;
       });
   }
 
