@@ -57,10 +57,15 @@ const ProductScreen = () => {
                 alt={product.name}
                 fluid
                 style={{ borderRadius: '6px' }}
+                className="custom-list-group"
               />
             </Col>
             <Col md={3}>
-              <ListGroup variant="flush " style={{ borderRadius: '6px' }}>
+              <ListGroup
+                variant="flush "
+                style={{ borderRadius: '6px' }}
+                className="custom-list-group-2"
+              >
                 <ListGroup.Item>
                   <h3>{product.name}</h3>
                 </ListGroup.Item>

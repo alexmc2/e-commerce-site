@@ -41,6 +41,7 @@ const cartSlice = createSlice({
       localStorage.setItem('cart', JSON.stringify(state));
     },
 
+    // user doesn't inherit the previous user cart and shipping
     resetCart: (state) => (state = initialState),
   },
 });

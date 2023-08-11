@@ -3,27 +3,24 @@ export const addDecimals = (num) => {
 };
 
 export const updateCart = (state) => {
-  // Calculate items price
-
-  state.itemsPrice = addDecimals(
-    state.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
-  );
+  // Calculate total price of items in the cart
+  const rawItemsPrice = state.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0);
 
   // Calculate shipping price
+  state.shippingPrice = addDecimals(rawItemsPrice > 100 ? 0 : 5);
 
-  state.shippingPrice = addDecimals(state.itemsPrice > 100 ? 0 : 5);
+  // Calculate VAT from the items price (excluding shipping)
+  const vatRate = 20; // 20% VAT
+  state.vatPrice = addDecimals(rawItemsPrice * (vatRate / (100 + vatRate)));
 
-  // Calculate vat price
-  state.vatPrice = addDecimals(Number((0.2 * state.itemsPrice).toFixed(2)));
+  // Adjust itemsPrice to be the total price minus the VAT
+  state.itemsPrice = addDecimals(rawItemsPrice - Number(state.vatPrice));
 
-  // Calculate total price
-  state.totalPrice = (
-    Number(state.itemsPrice) +
-    Number(state.shippingPrice) +
-    Number(state.vatPrice)
-  ).toFixed(2);
+  // Set the total price (items + VAT + shipping)
+  state.totalPrice = addDecimals(Number(state.itemsPrice) + Number(state.vatPrice) + Number(state.shippingPrice));
 
   localStorage.setItem('cart', JSON.stringify(state));
 
   return state;
 };
+

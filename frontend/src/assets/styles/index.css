@@ -64,6 +64,35 @@ body {
 }
 
 .app-container {
-  background-color: rgba(223, 244, 250, 0.219); 
+  background-color: rgba(223, 244, 250, 0.452);
   min-height: 100vh;
 }
+
+/* Styles for the container */
+/* .checkout-steps {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+} */
+
+/* Styles for the active step */
+.active-step {
+  background-color: #5a5a5a13;
+}
+
+@media (max-width: 767px) {
+  .custom-list-group {
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-list-group-2 {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+  }
+}
+
+
