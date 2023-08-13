@@ -15,6 +15,7 @@ const addOrderItems = asyncHandler(async (req, res) => {
     shippingPrice,
     totalPrice,
   } = req.body;
+  // console.log("🚀 ~ file: orderController.js:18 ~ addOrderItems ~ req.body:", req.body)
 
   if (orderItems && orderItems.length === 0) {
     res.status(400);
@@ -89,11 +90,10 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
     const updatedOrder = await order.save();
 
     res.status(201).json(updatedOrder);
-  }  else {
+  } else {
     res.status(404);
     throw new Error('Order not found!');
   }
-
 });
 
 // @desc Update order to delivered
@@ -101,7 +101,20 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
 // @access Private
 
 const updateOrderToDelivered = asyncHandler(async (req, res) => {
-  res.send('update order to delivered');
+  const order = await Order.findById(req.params.id);
+
+  if (order) {
+    // from PayPal
+    order.isDelivered = true;
+    order.deliveredAt = Date.now();
+
+    const updatedOrder = await order.save();
+
+    res.status(200).json(updatedOrder);
+  } else {
+    res.status(404);
+    throw new Error('Order not found!');
+  }
 });
 
 // @desc    Get all orders
@@ -109,7 +122,9 @@ const updateOrderToDelivered = asyncHandler(async (req, res) => {
 // @access  Private/Admin
 
 const getOrders = asyncHandler(async (req, res) => {
-  res.send('get all orders');
+  const orders = await Order.find({}).populate('user', 'id name');
+
+  res.status(200).json(orders);
 });
 
 export {
