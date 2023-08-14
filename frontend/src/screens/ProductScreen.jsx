@@ -20,6 +20,7 @@ import {
 } from '../slices/productsApiSlice';
 import { addToCart } from '../slices/cartSlice';
 import { toast } from 'react-toastify';
+import moment from 'moment';
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
@@ -180,10 +181,15 @@ const ProductScreen = () => {
                     <strong>{review.name}</strong>
 
                     <Rating value={review.rating} />
+                    <p> </p>
 
-                    <p>{review.createdAt.substring(0, 10)}</p>
+                      <p>{review.comment}</p>
+                    <p>  
+                      {moment( review.CreatedAt).format(
+                        'MMMM Do YYYY, h:mm a'
+                      )}
+                    </p>
 
-                    <p>{review.comment}</p>
                   </ListGroup.Item>
                 ))}
                 <ListGroup.Item>
