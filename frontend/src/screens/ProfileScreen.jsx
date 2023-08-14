@@ -8,7 +8,7 @@ import Loader from '../components/Loader';
 import { toast } from 'react-toastify';
 import { setCredentials } from '../slices/authSlice';
 import { useGetMyOrdersQuery } from '../slices/ordersApiSlice';
-import { FaTimes} from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 
 const ProfileScreen = () => {
   const [name, setName] = useState('');
@@ -34,6 +34,7 @@ const ProfileScreen = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+
     if (password !== confirmPassword) {
       toast.error('Passwords do not match');
     } else {
@@ -66,6 +67,7 @@ const ProfileScreen = () => {
               onChange={(e) => setName(e.target.value)}
             ></Form.Control>
           </Form.Group>
+
           <Form.Group className="my-2" controlId="email">
             <Form.Label>Email Address</Form.Label>
             <Form.Control
@@ -73,26 +75,34 @@ const ProfileScreen = () => {
               placeholder="Enter email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              readOnly={userInfo.email === 'admin@admin.com'} // Set readOnly attribute for Admin User
             ></Form.Control>
           </Form.Group>
-          <Form.Group className="my-2" controlId="password">
-            <Form.Label>Password</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Enter password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            ></Form.Control>
-          </Form.Group>
-          <Form.Group className="my-2" controlId="confirmPassword">
-            <Form.Label>Confirm Password</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="Confirm password"
-              value={confirmPassword}
-              onChange={(e) => setConfirmPassword(e.target.value)}
-            ></Form.Control>
-          </Form.Group>
+
+          {/* Conditionally render password fields if user is not the Admin User */}
+          {userInfo.email !== 'admin@admin.com' && (
+            <>
+              <Form.Group className="my-2" controlId="password">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Enter password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                ></Form.Control>
+              </Form.Group>
+              <Form.Group className="my-2" controlId="confirmPassword">
+                <Form.Label>Confirm Password</Form.Label>
+                <Form.Control
+                  type="password"
+                  placeholder="Confirm password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                ></Form.Control>
+              </Form.Group>
+            </>
+          )}
+
           <Button type="submit" variant="primary" className="my-2">
             Update
           </Button>
@@ -129,16 +139,15 @@ const ProfileScreen = () => {
                     {order.isPaid ? (
                       order.paidAt.substring(0, 10)
                     ) : (
-                        <FaTimes style={{ color: 'red' }} />
+                      <FaTimes style={{ color: 'red' }} />
                     )}
                   </td>
                   <td>
                     {order.isDelivered ? (
                       order.deliveredAt.substring(0, 10)
                     ) : (
-                        <FaTimes style={{ color: 'red' }} />
-                        )}
-                    
+                      <FaTimes style={{ color: 'red' }} />
+                    )}
                   </td>
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
