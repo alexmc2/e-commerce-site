@@ -18,14 +18,15 @@ const ProductListScreen = () => {
   const [createProduct, { isLoading: loadingCreate }] =
     useCreateProductMutation();
 
-    const [deleteProduct, { isLoading: loadingDelete }] =
+  const [deleteProduct, { isLoading: loadingDelete }] =
     useDeleteProductMutation();
 
   const deleteHandler = async (id) => {
-    if (window.confirm('Are you sure')) {
+    if (window.confirm('Are you sure you want to delete this product?')) {
       try {
         await deleteProduct(id);
-        refetch();
+        toast.success('Product deleted successfully');
+         refetch();
       } catch (err) {
         toast.error(err?.data?.message || err.error);
       }
@@ -36,6 +37,7 @@ const ProductListScreen = () => {
     if (window.confirm('Are you sure you want to create a new product?')) {
       try {
         await createProduct();
+        toast.success('Product created successfully!');
         refetch();
       } catch (err) {
         toast.error(err?.data?.message || err.error);
@@ -60,10 +62,10 @@ const ProductListScreen = () => {
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <Message variant='danger'>{error}</Message>
+        <Message variant="danger">{error}</Message>
       ) : (
         <>
-          <Table striped bordered hover responsive className='table-sm'>
+          <Table striped bordered hover responsive className="table-sm">
             <thead>
               <tr>
                 <th>ID</th>
@@ -84,13 +86,13 @@ const ProductListScreen = () => {
                   <td>{product.brand}</td>
                   <td>
                     <LinkContainer to={`/admin/product/${product._id}/edit`}>
-                      <Button variant='light' className='btn-sm mx-2'>
+                      <Button variant="light" className="btn-sm mx-2">
                         <FaEdit />
                       </Button>
                     </LinkContainer>
                     <Button
-                      variant='danger'
-                      className='btn-sm'
+                      variant="danger"
+                      className="btn-sm"
                       onClick={() => deleteHandler(product._id)}
                     >
                       <FaTrash style={{ color: 'white' }} />
