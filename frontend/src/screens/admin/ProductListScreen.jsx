@@ -7,7 +7,7 @@ import Loader from '../../components/Loader';
 // import Paginate from '../../components/Paginate';
 import {
   useGetProductsQuery,
-  // useDeleteProductMutation,
+  useDeleteProductMutation,
   useCreateProductMutation,
 } from '../../slices/productsApiSlice';
 import { toast } from 'react-toastify';
@@ -18,11 +18,18 @@ const ProductListScreen = () => {
   const [createProduct, { isLoading: loadingCreate }] =
     useCreateProductMutation();
 
-  // const [deleteProduct, { isLoading: loadingDelete }] =
-  //   useDeleteProductMutation();
+    const [deleteProduct, { isLoading: loadingDelete }] =
+    useDeleteProductMutation();
 
   const deleteHandler = async (id) => {
-    console.log('delete' + id);
+    if (window.confirm('Are you sure')) {
+      try {
+        await deleteProduct(id);
+        refetch();
+      } catch (err) {
+        toast.error(err?.data?.message || err.error);
+      }
+    }
   };
 
   const createProductHandler = async () => {
@@ -48,15 +55,15 @@ const ProductListScreen = () => {
           </Button>
         </Col>
       </Row>
-
       {loadingCreate && <Loader />}
+      {loadingDelete && <Loader />}
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <Message variant="danger">{error}</Message>
+        <Message variant='danger'>{error}</Message>
       ) : (
         <>
-          <Table striped bordered hover responsive className="table-sm">
+          <Table striped bordered hover responsive className='table-sm'>
             <thead>
               <tr>
                 <th>ID</th>
@@ -72,18 +79,18 @@ const ProductListScreen = () => {
                 <tr key={product._id}>
                   <td>{product._id}</td>
                   <td>{product.name}</td>
-                  <td>£{product.price}</td>
+                  <td>${product.price}</td>
                   <td>{product.category}</td>
                   <td>{product.brand}</td>
                   <td>
                     <LinkContainer to={`/admin/product/${product._id}/edit`}>
-                      <Button variant="light" className="btn-sm mx-2">
+                      <Button variant='light' className='btn-sm mx-2'>
                         <FaEdit />
                       </Button>
                     </LinkContainer>
                     <Button
-                      variant="danger"
-                      className="btn-sm"
+                      variant='danger'
+                      className='btn-sm'
                       onClick={() => deleteHandler(product._id)}
                     >
                       <FaTrash style={{ color: 'white' }} />

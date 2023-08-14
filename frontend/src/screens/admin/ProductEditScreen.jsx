@@ -41,7 +41,7 @@ const ProductEditScreen = () => {
     e.preventDefault();
     try {
       await updateProduct({
-        productId, 
+        productId,
         name,
         price,
         image,
