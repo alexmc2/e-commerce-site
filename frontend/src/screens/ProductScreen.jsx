@@ -21,6 +21,7 @@ import {
 import { addToCart } from '../slices/cartSlice';
 import { toast } from 'react-toastify';
 import moment from 'moment';
+import Meta from '../components/Meta';
 
 const ProductScreen = () => {
   const { id: productId } = useParams();
@@ -79,6 +80,7 @@ const ProductScreen = () => {
         </Message>
       ) : (
         <>
+          <Meta title={product.name} />
           <Row>
             <Col md={6}>
               <Image
@@ -183,13 +185,10 @@ const ProductScreen = () => {
                     <Rating value={review.rating} />
                     <p> </p>
 
-                      <p>{review.comment}</p>
-                    <p>  
-                      {moment( review.CreatedAt).format(
-                        'MMMM Do YYYY, h:mm a'
-                      )}
+                    <p>{review.comment}</p>
+                    <p>
+                      {moment(review.CreatedAt).format('MMMM Do YYYY, h:mm a')}
                     </p>
-
                   </ListGroup.Item>
                 ))}
                 <ListGroup.Item>

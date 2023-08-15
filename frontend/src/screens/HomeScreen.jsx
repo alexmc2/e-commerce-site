@@ -7,6 +7,8 @@ import { useParams } from 'react-router-dom';
 import Paginate from '../components/Paginate';
 import { Link } from 'react-router-dom';
 import ProductCarousel from '../components/ProductCarousel';
+import Meta from '../components/Meta';
+
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
@@ -20,7 +22,7 @@ const HomeScreen = () => {
     <>
       {!keyword ? (
         <div className="my-3">
-        <ProductCarousel />
+          <ProductCarousel />
         </div>
       ) : (
         <Link to="/" className="btn btn-light my-3">
@@ -36,6 +38,7 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
+          <Meta title="Welcome to the Wow Zone" />
           <h1 className="my-3">Latest Products</h1>
           <Row>
             {data.products.map((product) => (
