@@ -49,7 +49,8 @@ const ProductEditScreen = () => {
         category,
         description,
         countInStock,
-      }).unwrap();
+      }).unwrap(); // NOTE: here we need to unwrap the Promise to catch any rejection in our catch block
+      toast.success('Product updated');
       refetch();
       navigate('/admin/productlist');
     } catch (err) {
@@ -87,7 +88,7 @@ const ProductEditScreen = () => {
         Go Back
       </Link>
       <FormContainer>
-        <h1 className='my-3'>Edit Product</h1>
+        <h1>Edit Product</h1>
         {loadingUpdate && <Loader />}
         {isLoading ? (
           <Loader />
