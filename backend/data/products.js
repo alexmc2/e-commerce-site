@@ -71,6 +71,18 @@ const products = [
     rating: 4,
     numReviews: 12,
   },
+  {
+    name: 'Concept 2 Model D Indoor Rowing Machine',
+    image: '/images/concept2.jpg',
+    description:
+      'Description: Sophisticated yet easy to use, the Concept 2 is recognised by competitive rowers as the standard for indoor training. Delivers an eﬀective cardiovascular workout that will increase your ﬁtness levels.',
+    brand: 'Concept 2',
+    category: 'Exercise equipment',
+    price: 29.99,
+    countInStock: 20,
+    rating: 4,
+    numReviews: 12,
+  },
 ];
 
 export default products;
