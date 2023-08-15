@@ -54,7 +54,7 @@ const UserEditScreen = () => {
         Go Back
       </Link>
       <FormContainer>
-        <h1>Edit User</h1>
+        <h1 className='my-3'>Edit User</h1>
         {loadingUpdate && <Loader />}
         {isLoading ? (
           <Loader />

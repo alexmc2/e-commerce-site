@@ -11,7 +11,7 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { Button, Col, Row, ListGroup, Image, Card } from 'react-bootstrap';
 import { toast } from 'react-toastify';
-import { clearCartItems } from '../slices/cartSlice';
+
 import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
 import moment from 'moment';
 
@@ -115,7 +115,7 @@ const OrderScreen = () => {
     <Message variant="danger">{error}</Message>
   ) : (
     <>
-      <h1>Order {order._id}</h1>
+      <h1 className="my-3">Order {order._id}</h1>
       <Row>
         <Col md={8}>
           <ListGroup variant="flush">
@@ -136,7 +136,8 @@ const OrderScreen = () => {
               </p>
               {order.isDelivered ? (
                 <Message variant="success">
-                  Delivered on {moment(order.deliveredAt).format('MMMM Do YYYY, h:mm:ss a')}
+                  Delivered on{' '}
+                  {moment(order.deliveredAt).format('MMMM Do YYYY, h:mm:ss a')}
                 </Message>
               ) : (
                 <Message variant="danger">Not Delivered</Message>

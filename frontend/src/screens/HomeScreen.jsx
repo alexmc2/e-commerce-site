@@ -5,6 +5,7 @@ import Loader from '../components/Loader';
 import Message from '../components/Message';
 import { useParams } from 'react-router-dom';
 import Paginate from '../components/Paginate';
+import { Link } from 'react-router-dom';
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
@@ -16,6 +17,11 @@ const HomeScreen = () => {
 
   return (
     <>
+      {keyword && (
+        <Link to="/" className="btn btn-light my-3">
+          Go Back
+        </Link>
+      )}
       {isLoading ? (
         <Loader />
       ) : error ? (
@@ -25,7 +31,7 @@ const HomeScreen = () => {
         </Message>
       ) : (
         <>
-          <h1>Latest Products</h1>
+          <h1 className='my-3'>Latest Products</h1>
           <Row>
             {data.products.map((product) => (
               <Col key={product._id} sm={12} md={6} lg={4} xl={3}>

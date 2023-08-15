@@ -50,7 +50,7 @@ const RegisterScreen = () => {
 
   return (
     <FormContainer>
-      <h1>Sign Up</h1>
+      <h1 className='my-3'>Sign Up</h1>
 
       <Form.Group className="my-2" controlId="name">
           <Form.Label>Name</Form.Label>

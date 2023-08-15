@@ -95,4 +95,15 @@ body {
   }
 }
 
+body {
+  padding-top: 80px;
+}
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* This ensures the container takes up the full viewport height */
+}
+main.py-3 {
+  flex: 1 0 auto; /* This will make the main content take up all available space */
+}

@@ -53,7 +53,7 @@ const ProductListScreen = () => {
     <>
       <Row className="align-items-center">
         <Col>
-          <h1>Products</h1>
+          <h1 className='my-3'>Products</h1>
         </Col>
         <Col className="text-end">
           <Button className="my-3" onClick={createProductHandler}>
