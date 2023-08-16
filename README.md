@@ -4,8 +4,6 @@ Welcome to the Wow-Store, an eCommerce application built with the MERN stack! Th
 
 [Live Site (initial load might be slow)](https://e-commerce-site-y0uv.onrender.com)
 
-For admin functionality, use admin@email.com, password: 123456.
-
 ## Features:
 
 ### Orders:
