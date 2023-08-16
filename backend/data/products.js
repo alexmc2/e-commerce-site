@@ -53,7 +53,7 @@ const products = [
     image: '/images/camera.jpg',
     description:
       'Characterized by versatile imaging specs, the Canon EOS 80D further clarifies itself using a pair of robust focusing systems and an intuitive design',
-    brand: 'Cannon',
+    brand: 'Canon',
     category: 'Electronics',
     price: 929.99,
     countInStock: 5,
@@ -65,7 +65,7 @@ const products = [
     image: '/images/tent.jpg',
     description:
       'Cloud-Up 2 series tent, 20D silicone coated nylon fabric, 7001 aluminum poles. It has the optimal balance of weight and strength. It offers a comfort and safe protection on your backpack trip or mountaineering trip.',
-    brand: 'Amazon',
+    brand: 'Naturehike',
     category: 'Sports and Outdoors',
     price: 99.99,
     countInStock: 20,
@@ -89,7 +89,7 @@ const products = [
     image: '/images/graphicscard.jpg',
     description:
       'Gaming GeForce RTX™ 4070 Ti 12GB GDDR6X, lower temps, and enhanced durability.',
-    brand: 'Cannon',
+    brand: 'Nvidia',
     category: 'Electronics',
     price: 799.99,
     countInStock: 5,
@@ -155,6 +155,30 @@ const products = [
     price: 199.99,
     countInStock: 10,
     rating: 5,
+    numReviews: 2,
+  },
+  {
+    name: 'Garmin epix Pro (Gen 2)',
+    image: '/images/garmin.jpg',
+    description:
+      'All new rugged Epix Gen 2 Pro Sapphire Titanium multisport GPS watch. Purpose-built for indoor & outdoor use.',
+    brand: 'BenQ',
+    category: 'Electronics/Sports and Outdoors',
+    price: 799.99,
+    countInStock: 10,
+    rating: 5,
+    numReviews: 5,
+  },
+  {
+    name: 'Intex Seahawk Inflatable Boat',
+    image: '/images/boat.jpg',
+    description:
+      'Whether fishing, relaxing, or rowing on the lake, the Seahawk 4 inflatable boat is great for making your boating experience exciting and entertaining. ',
+    brand: 'Intex',
+    category: 'Sports and Outdoors',
+    price: 99.99,
+    countInStock: 10,
+    rating: 4.5,
     numReviews: 2,
   },
 ];
