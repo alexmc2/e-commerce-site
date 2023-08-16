@@ -7,6 +7,7 @@ Welcome to the Wow-Store, an eCommerce application built with the MERN stack! Th
 ## Features:
 
 ### Orders:
+
 - Create new orders.
 - Payment functionality using PayPal sandbox.
 - Retrieve all orders made by a logged-in user.
@@ -16,6 +17,7 @@ Welcome to the Wow-Store, an eCommerce application built with the MERN stack! Th
 - Admin functionality to view all orders.
 
 ### Products:
+
 - Fetch all products with pagination and search functionality.
 - Retrieve details of a specific product by its ID.
 - Admin functionality to create a new product with default sample data.
@@ -25,6 +27,7 @@ Welcome to the Wow-Store, an eCommerce application built with the MERN stack! Th
 - Top-rated products featured on a product carousel.
 
 ### Users:
+
 - User authentication using json web tokens.
 - Register a new user.
 - Logout functionality that clears the authentication cookie.
@@ -33,8 +36,6 @@ Welcome to the Wow-Store, an eCommerce application built with the MERN stack! Th
 - Admin functionality to fetch a user by ID.
 - Admin functionality to delete a user.
 - Admin functionality to update user details.
-
-
 
 ## Tech Stack:
 
@@ -48,55 +49,56 @@ Welcome to the Wow-Store, an eCommerce application built with the MERN stack! Th
 ![Screenshot1](https://user-images.githubusercontent.com/119585058/260997062-ed568874-d341-462f-be1e-bbaf67664e11.png)
 ![Screenshot2](https://user-images.githubusercontent.com/119585058/260997705-3e7046c6-1c4e-4056-a106-53a3fae9a1d5.png)
 ![Screenshot3](https://user-images.githubusercontent.com/119585058/261002053-72ae595e-d1df-441a-8c89-bca3d293c8af.png)
-
-
+![Screenshot3](https://user-images.githubusercontent.com/119585058/261002750-a348e553-29e7-4f3f-8f7a-6a4dce6d0734.png)
 
 ## Backend Setup:
 
 1. **Navigate to the root directory and install dependencies:**
-    ```bash
-    npm install
-    ```
+
+   ```bash
+   npm install
+   ```
 
 2. **Set up your environment variables in a .env file in the root directory:**
-    ```env
-    MONGO_URI=your_mongodb_uri
-    JWT_SECRET=your_jwt_secret
-    PAYPAL_CLIENT_ID=your_paypal_client_id
-    ```
+
+   ```env
+   MONGO_URI=your_mongodb_uri
+   JWT_SECRET=your_jwt_secret
+   PAYPAL_CLIENT_ID=your_paypal_client_id
+   ```
 
 3. **Populate the database with sample data:**
-    ```bash
-    npm run data:import
-    ```
+
+   ```bash
+   npm run data:import
+   ```
 
 4. **Start the backend server:**
-    ```bash
-    npm run server
-    ```
+   ```bash
+   npm run server
+   ```
 
 ## Frontend Setup:
 
 1. **Navigate to the frontend directory and install dependencies:**
-    ```bash
-    cd frontend && npm install
-    ```
+
+   ```bash
+   cd frontend && npm install
+   ```
 
 2. **Start the frontend development server:**
-    ```bash
-    npm start
-    ```
+   ```bash
+   npm start
+   ```
 
 ## Running Both Frontend & Backend:
 
 - **From the root directory, you can run both frontend and backend concurrently:**
-    ```bash
-    npm run dev
-    ```
+  ```bash
+  npm run dev
+  ```
 
 ## Links:
+
 - [Live Demo](https://e-commerce-site-y0uv.onrender.com/upload)
 - [Report Issues](https://github.com/alexmc2/e-commerce-site/issues)
-
-
-
