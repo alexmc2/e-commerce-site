@@ -3,7 +3,7 @@
 Welcome to the Wow-Store, an eCommerce application built with the MERN stack! This is a portfolio project that showcases an online shopping experience, from product listings to user authentication and online payments. The backend is powered by Express and MongoDB, and the frontend was made with React, Redux, and Bootstrap.
 
 [Live Site (initial load might be slow)](https://e-commerce-site-y0uv.onrender.com)
-- For admin functionality, use admin@email.com, password: 123456.
+For admin functionality, use admin@email.com, password: 123456.
 
 ## Features:
 
