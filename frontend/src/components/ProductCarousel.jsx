@@ -62,7 +62,7 @@ const ProductCarousel = () => {
           display: 'flex', 
           justifyContent: 'center', 
           alignItems: 'center', 
-          height: '31rem'  // Adjust this height as needed
+          height: '31rem'  
         }}
       >
           <Link to={`/product/${product._id}`}>
