@@ -45,9 +45,9 @@ Welcome to the Wow-Store, an eCommerce application built with the MERN stack! Th
 - ![Redux](https://img.shields.io/badge/-Redux-764ABC?style=for-the-badge&logo=redux&logoColor=white)
 - ![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-![Screenshot1](https://github.com/alexmc2/e-commerce-site/issues/1)
-![Screenshot2](https://github.com/alexmc2/e-commerce-site/issues/2)
-![Screenshot3](https://github.com/alexmc2/e-commerce-site/issues/3)
+![Screenshot1](https://user-images.githubusercontent.com/119585058/260997062-ed568874-d341-462f-be1e-bbaf67664e11.png)
+![Screenshot2](https://user-images.githubusercontent.com/119585058/260997705-3e7046c6-1c4e-4056-a106-53a3fae9a1d5.png)
+![Screenshot3](https://user-images.githubusercontent.com/119585058/261002053-72ae595e-d1df-441a-8c89-bca3d293c8af.png)
 
 
 
