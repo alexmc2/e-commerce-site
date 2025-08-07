@@ -1,6 +1,6 @@
-# Wow-Store eCommerce Platform
+# TechBay eCommerce Platform
 
-Welcome to the Wow-Store, an eCommerce application built with the MERN stack! This is a portfolio project that showcases an online shopping experience, from product listings to user authentication and online payments. The backend is powered by Express and MongoDB, and the frontend was made with React, Redux, and Bootstrap.
+Welcome to TechBay, a modern eCommerce application built with the MERN stack! This is a portfolio project that showcases a professional online shopping experience for technology and electronics, featuring product listings, user authentication, and secure online payments. The backend is powered by Express and MongoDB, while the frontend leverages React, Redux, and Bootstrap for a responsive user interface.
 
 [Live Site (initial load might be slow)](https://e-commerce-site-y0uv.onrender.com)
 

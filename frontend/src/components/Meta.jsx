@@ -11,10 +11,10 @@ const Meta = ({ title, description, keywords }) => {
 };
 
 Meta.defaultProps = {
-  title: 'Welcome to the Wow Zone',
-  description: 'Discover the latest and greatest products',
+  title: 'TechBay - Tech & Electronics Store',
+  description: 'Shop the latest technology, electronics, and gadgets at TechBay',
   keywords:
-    'electronics, sports, fashion, clothing, furniture, books, games, movies, music',
+    'electronics, technology, computers, laptops, phones, cameras, gaming, gadgets, tech accessories',
 };
 
 export default Meta;

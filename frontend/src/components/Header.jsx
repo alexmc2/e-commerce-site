@@ -1,7 +1,7 @@
 import { Badge, Navbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { FaShoppingCart, FaUser } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-import logo from '../../src/assets/logo.png';
+import logo from '../../src/assets/techbay-logo.svg';
 import { LinkContainer } from 'react-router-bootstrap';
 import { useSelector, useDispatch } from 'react-redux';
 import { useLogoutMutation } from '../slices/usersApiSlice';
@@ -33,12 +33,12 @@ const Header = () => {
         <Container>
           <LinkContainer to="/">
             <Navbar.Brand>
-              <img src={logo} alt="shop" />
+              <img src={logo} alt="TechBay" style={{ width: '40px', height: '40px' }} />
               <span
                 className="ms-3"
-                style={{ fontFamily: 'Poppins', fontSize: '23px' }}
+                style={{ fontFamily: 'Poppins', fontSize: '24px', fontWeight: '600', letterSpacing: '-0.5px' }}
               >
-                THE WOW ZONE
+                TechBay
               </span>
             </Navbar.Brand>
           </LinkContainer>

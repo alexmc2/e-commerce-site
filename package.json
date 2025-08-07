@@ -1,7 +1,7 @@
 {
-  "name": "wow-store",
+  "name": "techbay",
   "version": "1.0.0",
-  "description": "eCommerce application built with the MERN stack",
+  "description": "TechBay - Modern eCommerce platform built with the MERN stack",
   "type": "module",
   "main": "server.js",
   "scripts": {
