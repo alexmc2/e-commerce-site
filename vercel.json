@@ -5,7 +5,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "e-commerce-site-production-eceb.up.railway.app"
+      "destination": "https://e-commerce-site-production-eceb.up.railway.app/api/$1"
     },
     {
       "source": "/(.*)",
