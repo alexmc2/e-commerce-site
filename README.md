@@ -2,7 +2,7 @@
 
 Welcome to TechBay, a modern eCommerce application built with the MERN stack! This is a portfolio project that showcases a professional online shopping experience for technology and electronics, featuring product listings, user authentication, and secure online payments. The backend is powered by Express and MongoDB, while the frontend leverages React, Redux, and Bootstrap for a responsive user interface.
 
-[Live Site (initial load might be slow)](https://e-commerce-site-y0uv.onrender.com)
+[Live Site](https://techbay-phi.vercel.app/)
 
 ## Features:
 
